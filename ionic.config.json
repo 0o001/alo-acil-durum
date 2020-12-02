@@ -1,0 +1,8 @@
+{
+  "name": "Alo Acil Durum",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

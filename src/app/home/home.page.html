@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Alo Acil Durum
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        Alo Acil Durum
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div>
+    <div class="ion-item" *ngFor="let message of getMessages()">
+      <ion-button expand="block" color="danger" href="{{'tel:'+message.number }}">{{ message.name }}</ion-button>
+    </div>
+    <div class="ion-item">
+      <ion-button expand="block" href="https://google.com/search?q=acil+durum+numaraları+listesi">Web'de Ara</ion-button>
+    </div>
+  </div>
+
+</ion-content>
